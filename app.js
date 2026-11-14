@@ -1,4 +1,4 @@
-// app.js: Lunar Sites console.
+// app.js: Terminator console.
 // Reads precomputed NASA/JPL Horizons data (data/sites/*.json) and shows
 // Sun & Earth visibility for lunar landing sites.
 // Code written with assistance from Claude (Anthropic AI assistant).
