@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunar Sites — Sun &amp; Earth Visibility Console</title>
+<meta name="description" content="Compare lunar landing sites and dates by Sun and Earth visibility: power and direct-to-Earth comms windows at a glance. Built on NASA JPL Horizons data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-name">LUNAR SITES</span>
+    <span class="brand-sub">SUN &amp; EARTH VISIBILITY CONSOLE</span>
+  </div>
+  <div class="timectl">
+    <span class="lbl">EPOCH · UTC</span>
+    <input type="date" id="date" aria-label="Date (UTC)">
+    <input type="time" id="time" step="3600" aria-label="Time (UTC)">
+    <div class="btns">
+      <button data-step="-24" title="Back 1 day">−1D</button>
+      <button data-step="-1" title="Back 1 hour">−1H</button>
+      <button data-step="1" title="Forward 1 hour">+1H</button>
+      <button data-step="24" title="Forward 1 day">+1D</button>
+      <button id="now" title="Jump to current time">NOW</button>
+      <button id="play" class="play" title="Animate time">▶ PLAY</button>
+    </div>
+  </div>
+</header>
+
+<section class="strip-wrap">
+  <div class="strip-head">
+    <span class="lbl">SITES · CLICK TO SELECT · <span class="b-key">+B</span> TO COMPARE</span>
+    <span class="legend"><i class="dot sun"></i>SUN UP <i class="dot earth"></i>EARTH VISIBLE <i class="dot off"></i>BELOW HORIZON</span>
+  </div>
+  <div id="strip" class="strip"></div>
+</section>
+
+<main class="layout">
+  <div class="cards">
+    <section class="panel card" id="cardA"></section>
+    <section class="panel card" id="cardB"></section>
+  </div>
+
+  <section class="panel timeline-panel">
+    <div class="panel-head">
+      <span class="lbl">30-DAY EPHEMERIS · ELEVATION ABOVE FLAT HORIZON</span>
+      <span class="hint">click chart to set time</span>
+    </div>
+    <div id="timeline" class="timeline"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span class="lbl">30-DAY WINDOW SUMMARY · FROM SELECTED EPOCH</span></div>
+    <div id="summary"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><b>Data:</b> Sun and Earth apparent azimuth/elevation from the NASA/JPL Horizons System, hourly, Nov 2026 – Dec 2028, for each site as a surface observer on the Moon.</p>
+  <p><b>Limitation:</b> elevations are measured against a flat (smooth-sphere) horizon. Real terrain, such as crater rims and ridges near the south pole, can block the Sun or Earth even when these numbers say it is up.</p>
+  <p><b>AI disclosure:</b> code written with assistance from Claude (Anthropic AI assistant).</p>
+</footer>
+
+<div id="loading" class="loading">LOADING EPHEMERIS…</div>
+<script src="app.js?v=2"></script>
+</body>
+</html>
