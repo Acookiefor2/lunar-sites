@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
       <button data-step="24" title="Forward 1 day">+1D</button>
       <button id="now" title="Jump to current time">NOW</button>
       <button id="play" class="play" title="Animate time">▶ PLAY</button>
+      <button id="terrain" class="toggle on" title="Use real LOLA terrain horizons where available">TERRAIN: ON</button>
     </div>
   </div>
 </header>
@@ -35,7 +36,7 @@
 <section class="strip-wrap">
   <div class="strip-head">
     <span class="lbl">SITES · CLICK TO SELECT · <span class="b-key">+B</span> TO COMPARE</span>
-    <span class="legend"><i class="dot sun"></i>SUN UP <i class="dot earth"></i>EARTH VISIBLE <i class="dot off"></i>BELOW HORIZON</span>
+    <span class="legend"><i class="dot sun"></i>SUN UP <i class="dot earth"></i>EARTH VISIBLE <i class="dot blk-sun"></i>BLOCKED BY TERRAIN <i class="dot off"></i>BELOW HORIZON</span>
   </div>
   <div id="strip" class="strip"></div>
 </section>
@@ -48,7 +49,7 @@
 
   <section class="panel timeline-panel">
     <div class="panel-head">
-      <span class="lbl">30-DAY EPHEMERIS · ELEVATION ABOVE FLAT HORIZON</span>
+      <span class="lbl" id="tl-label">30-DAY EPHEMERIS · ELEVATION ABOVE FLAT HORIZON</span>
       <span class="hint">click chart to set time</span>
     </div>
     <div id="timeline" class="timeline"></div>
@@ -62,11 +63,12 @@
 
 <footer class="foot">
   <p><b>Data:</b> Sun and Earth apparent azimuth/elevation from the NASA/JPL Horizons System, hourly, Nov 2026 – Dec 2028, for each site as a surface observer on the Moon.</p>
-  <p><b>Limitation:</b> elevations are measured against a flat (smooth-sphere) horizon. Real terrain, such as crater rims and ridges near the south pole, can block the Sun or Earth even when these numbers say it is up.</p>
+  <p><b>Terrain:</b> for sites marked TERRAIN, a real skyline is computed from the NASA LOLA south-pole elevation map (240 m/pixel, GSFC PGDA): from a point 2 m above the ground, the highest terrain is found in 720 directions out to 250 km. Other sites use a flat (smooth-sphere) horizon.</p>
+  <p><b>Limitations:</b> the Sun is treated as a point (its centre), so partial sunrise is not modelled; 240 m terrain can miss small nearby boulders and slopes.</p>
   <p><b>AI disclosure:</b> code written with assistance from Claude (Anthropic AI assistant).</p>
 </footer>
 
 <div id="loading" class="loading">LOADING EPHEMERIS…</div>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

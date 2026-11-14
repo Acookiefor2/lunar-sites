@@ -138,3 +138,15 @@ table.sum td.better { color: var(--both); }
   .topbar, .strip-wrap, .layout, .foot { padding-left: 12px; padding-right: 12px; }
   .ro-val { font-size: 19px; }
 }
+
+/* terrain */
+button.toggle { border-color: var(--line-2); color: var(--dim); }
+button.toggle.on { border-color: #a08a6c; color: #e8d3b0; background: #1a1610; }
+.dot.blk-sun { background: repeating-linear-gradient(45deg, var(--sun) 0 2px, transparent 2px 4px); border-color: var(--sun); }
+.dot.blk-earth { background: repeating-linear-gradient(45deg, var(--earth) 0 2px, transparent 2px 4px); border-color: var(--earth); }
+.tchip { font-size: 9px; letter-spacing: .08em; color: var(--faint); }
+.tchip.on { color: #c9ad86; }
+.card-terrain { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; color: var(--faint); margin-top: 4px; }
+.card-terrain.on { color: #c9ad86; }
+.ro-status.blk { color: #ff8a3d; border-style: dashed; }
+.flatv { display: block; font-size: 10.5px; color: var(--faint); }

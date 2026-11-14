@@ -1,11 +1,11 @@
 [
-  {"id": "apollo11",   "name": "Apollo 11 (Tranquility Base)",       "group": "equator",    "lat": 0.6741,   "lon": 23.4730,  "note": "First crewed landing, 1969. Normal-ish sunrise/sunset reference."},
-  {"id": "apollo17",   "name": "Apollo 17 (Taurus-Littrow)",         "group": "equator",    "lat": 20.1911,  "lon": 30.7723,  "note": "Last crewed landing, 1972. Second normal reference site."},
-  {"id": "clavius",    "name": "Clavius crater",                     "group": "mid-south",  "lat": -58.4,    "lon": -14.4,    "note": "Where SOFIA detected water on the sunlit surface (2020). Crater centre."},
-  {"id": "change4",    "name": "Chang'e 4 (Von Karman crater)",      "group": "far side",   "lat": -45.444,  "lon": 177.599,  "note": "First far-side landing, 2019. Earth never rises here: needs a relay satellite."},
-  {"id": "chandrayaan3","name": "Chandrayaan-3 (Shiv Shakti Point)", "group": "south pole", "lat": -69.373,  "lon": 32.319,   "note": "India's landing, 2023. Southernmost landing at the time."},
-  {"id": "monsmouton", "name": "Mons Mouton (IM-2 target)",          "group": "south pole", "lat": -84.78,   "lon": 29.13,    "note": "Intuitive Machines IM-2 target, 2025. Also near the planned VIPER area."},
-  {"id": "malapert",   "name": "Malapert Massif",                    "group": "south pole", "lat": -86.0,    "lon": 0.0,      "note": "Artemis III candidate region. Tall massif facing Earth. Approximate region centre."},
-  {"id": "haworth",    "name": "Haworth crater",                     "group": "south pole", "lat": -86.9,    "lon": -4.0,     "note": "Artemis III candidate region next to a permanently shadowed crater. Crater centre: real terrain keeps the floor dark."},
-  {"id": "shackleton", "name": "Shackleton connecting ridge",        "group": "south pole", "lat": -89.45,   "lon": -130.31,  "note": "One of the best-lit spots on the Moon, on the ridge to de Gerlache crater."}
+  {"id": "apollo11", "name": "Apollo 11 (Tranquility Base)", "group": "equator", "lat": 0.6741, "lon": 23.473, "note": "First crewed landing, 1969. Normal-ish sunrise/sunset reference."},
+  {"id": "apollo17", "name": "Apollo 17 (Taurus-Littrow)", "group": "equator", "lat": 20.1911, "lon": 30.7723, "note": "Last crewed landing, 1972. Second normal reference site."},
+  {"id": "clavius", "name": "Clavius crater", "group": "mid-south", "lat": -58.4, "lon": -14.4, "note": "Where SOFIA detected water on the sunlit surface (2020). Crater centre."},
+  {"id": "change4", "name": "Chang'e 4 (Von Karman crater)", "group": "far side", "lat": -45.444, "lon": 177.599, "note": "First far-side landing, 2019. Earth never rises here: needs a relay satellite."},
+  {"id": "chandrayaan3", "name": "Chandrayaan-3 (Shiv Shakti Point)", "group": "south pole", "lat": -69.373, "lon": 32.319, "note": "India's landing, 2023. Southernmost landing at the time."},
+  {"id": "monsmouton", "name": "Mons Mouton (IM-2 target)", "group": "south pole", "lat": -84.78, "lon": 29.13, "note": "Intuitive Machines IM-2 target, 2025. Also near the planned VIPER area."},
+  {"id": "malapert", "name": "Malapert Massif (summit)", "group": "south pole", "lat": -85.9902, "lon": 2.0918, "note": "Artemis III candidate region. Summit of a ~5 km tall massif facing Earth. Position snapped to the LOLA high point."},
+  {"id": "haworth", "name": "Haworth crater", "group": "south pole", "lat": -86.9, "lon": -4.0, "note": "Artemis III candidate region next to a permanently shadowed crater. Crater centre: real terrain keeps the floor dark."},
+  {"id": "shackleton", "name": "Shackleton connecting ridge", "group": "south pole", "lat": -89.4455, "lon": -137.3137, "note": "Crest of the ridge to de Gerlache crater (89.45°S, 222.69°E): among the best-lit spots on the Moon. Position snapped to the LOLA high point."}
 ]

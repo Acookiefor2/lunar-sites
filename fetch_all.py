@@ -1,10 +1,11 @@
 # fetch_all.py
 # Lunar Sites: pulls Sun and Earth azimuth/elevation for every site in sites.json
 # from NASA JPL Horizons, and saves one compact JSON file per site in data/sites/.
-# Run once; the web app only reads the saved files (no live API calls in the demo).
+# Run once (or pass site ids to refetch just those); the web app only reads the saved files (no live API calls in the demo).
 # Code written with help from Claude (Anthropic AI assistant).
 
 import json
+import sys
 import time
 from pathlib import Path
 
@@ -86,6 +87,9 @@ def parse(result):
 
 def main():
     sites = json.loads(Path("sites.json").read_text(encoding="utf-8"))
+    only = sys.argv[1:]  # e.g.  python fetch_all.py shackleton malapert
+    if only:
+        sites = [s for s in sites if s["id"] in only]
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"Fetching {len(sites)} sites, {START} to {STOP}, every {STEP_HOURS}h\n")
